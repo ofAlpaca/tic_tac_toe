@@ -39,39 +39,6 @@ def makeMove(board, letter, move):
 
 def isSpaceFree(board, move):
     return board[move] == ' '
-"""
-def isWinner(bo, le, n):
-    #find column
-    for i in range(1,n+1):
-        count = 0
-        for j in range(0,n):
-            if bo[n*j+i] == le:
-               count = count + 1
-        if count == n:
-            return True
-    #find row
-    for i in range(1,n*n-n+2,n):
-        count = 0
-        for j in range(0,n):
-            if bo[i+j] == le:
-               count = count + 1
-        if count == n:
-            return True
-    #find cross
-    count = 0
-    for i in range(0,n*n,n+1):
-        if bo[1+i] == le:
-            count = count + 1
-    if count == 4:
-        return True
-
-    count = 0
-    for i in range(0,n*n-n+1,n-1):
-        if bo[n+i] == le:
-            count = count + 1
-    if count == 4:
-        return True
-"""
 
 def isWinner(bo, le):
     return ((bo[7] == le and bo[8] == le and bo[9] == le) or # across the top
